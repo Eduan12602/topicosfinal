@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AgendaApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AgendaApp"
+	xmlns:views="clr-namespace:AgendaApp.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="AgendaApp">
+	   
+
+    <ShellItem Title="Agenda">
+        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+    </ShellItem>
+
+    <ShellItem Title="Configuración">
+        <ShellContent ContentTemplate="{DataTemplate views:ConfiguracionPage}" />
+    </ShellItem>
+	
+</Shell>
