@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginFlow.Views.AgendaPage"
+             Title="Agenda">
+
+        <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label x:Name = "titleLabel" Text="Agenda" FontAttributes="Bold"/>
+            <Button Text="Agregar Contacto" Clicked="OnAgregarContactoClicked" />
+            <CollectionView  x:Name="contactosView" 
+                             ItemsSource="{Binding Contacto}"
+                             SelectionMode="Single" SelectionChanged="OnContactoSeleccionado">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                             
+                            <Grid Padding="10">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Nombre}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Telefono}" />
+                                    <Label Text="{Binding CorreoElectronico}" FontSize="Small" />
+                                </VerticalStackLayout>
+                            </Grid>
+                       
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Configuración" Clicked="OnConfiguracionClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
+    

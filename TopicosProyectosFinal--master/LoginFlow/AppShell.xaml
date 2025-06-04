@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LoginFlow.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LoginFlow"
+    xmlns:views="clr-namespace:LoginFlow.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <!--Loading Page-->
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:LoadingPage}"
+        Route="loading" />
+
+    <!--Login Page-->
+    <ShellContent 
+        Title="Login" 
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="login"/>
+    <!--Main Page-->
+    <TabBar>
+        <Tab Title="Home" Icon="house_door_fill.svg">
+            <ShellContent
+                Icon="house_door_fill.svg"
+        Title="Home"
+        ContentTemplate="{DataTemplate views:HomePage}"
+        Route="home" />
+
+        </Tab>
+        <Tab Title="Agenda" Icon="appicono.jpeg">
+            <ShellContent 
+                   Icon="appicono.jpeg"
+                   Title="Agenda" 
+                   ContentTemplate="{DataTemplate views:AgendaPage}" 
+                    Route="Agenda"/>
+        </Tab>
+        
+        <Tab Title="Settings" Icon="gear_fill.svg">
+            <ShellContent
+                Icon="house_door_fill.svg"
+        Title="Settings"
+        ContentTemplate="{DataTemplate views:SettingsPage}"
+        Route="settings" />
+        </Tab>
+    </TabBar>
+
+    <!--register Page-->
+    <ShellContent
+    Title="Register"
+    ContentTemplate="{DataTemplate views:RegisterPage}"
+    Route="Register" />
+
+    <!--recover Page-->
+    <ShellContent
+    Title="Recover"
+    ContentTemplate="{DataTemplate views:RecoverPage}"
+    Route="Recover" />
+
+</Shell>
